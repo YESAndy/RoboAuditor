@@ -245,31 +245,28 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Energy auditing is a crucial step in building retrofitting to enhance building energy efficiency. 
+            However, auditing tasks, such as profiling energy-consuming appliances in buildings, 
+            rely heavily on human inspectors, resulting in a time- and capital-intensive process.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To this end, we propose an autonomous robotic system, dubbed <span class="dnerf">RoboAuditor</span>, 
+            for identifying and localizing energy-intensive appliances in buildings given text queries from humans. 
+            <span class="dnerf">RoboAuditor</span> utilizes visual language models to predict relevance scores 
+            between text queries and observed 
+            images for goal selection in robot navigation. It then automatically identifies and localizes 
+            queried appliances while self-navigating with efficient navigational strategies. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            For evaluation, we deploy the proposed robotic system on a wheeled robot equipped with an RGB-D camera 
+            and run auditing tests in 12 residential buildings in 3D simulation. 
+            These buildings exhibit diverse room counts, appliance quantities, and navigable areas, 
+            and they all feature energy-intensive appliances, such as air conditioners, heaters, dishwashers, and refrigerators. 
+            We conduct two groups of experiments: the first group uses the relevance score, 
+            and the second serves as a control group without the relevance score. 
+            Results demonstrate that <span class="dnerf">RoboAuditor</span> detects queried appliances and accurately 
+            localizes their positions in buildings
+            with an average success rate of 68.05%, showing a significant margin of 6.8% higher than the control group.
           </p>
         </div>
       </div>
